@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo requisição</title>
+</head>
+<body>
+    <input type="number" id="numero" placeholder="Digite um numero aqui...">
+    <button onclick="executarRequsicaoExemplo()">Executar</button>
+</body>
+<script>
+    function executarRequsicaoExemplo() {
+        let numero = document.getElementById("numero").value;
+        
+        fetch(`http://127.0.0.1:8000/api/produtos/`)
+            .then(response => {
+                return response.json();
+            })
+            
+            .then(data => {
+                console.log(data);
+                alert("Requisição bem-sucedida! Veja o console para os dados.");
+            });
+    }
+
+</script>
+
+</html>

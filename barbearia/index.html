@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="style.css" />
+
+
+    <title>Document</title>
+</head>
+
+<body class="bg-home">
+
+
+    <header>
+        <div class="header-content">
+            <div class="header-icons">
+                <a href="#">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+            </div>
+
+            <div>
+                <img src="logo.svg" alt="Logo da barbearia" />
+            </div>
+
+            <div>
+                <a class="header-button" href="#" data-bs-toggle="modal" data-bs-target="#modalAgenda">Agendar horário</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero">
+        <h1>ESTILO É UM REFLEXO DA SUA ATITUDE E SUA PERSONALIDADE.</h1>
+        <p>Horário de funcionamento: 09:00 ás 19:00</p>
+        <a href="#" class="button-contact" target="_blank" data-bs-toggle="modal" data-bs-target="#modalAgenda">
+            Agendar horário
+        </a>
+    </main>
+
+    <div class="modal fade" id="modalAgenda" tabindex="-1" aria-labelledby="modalAgendaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAgendaLabel">Horários Disponíveis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-cols-3 g-2">
+                        <div class="col"><button type="button" class="btn btn-outline-primary w-100 horario" data-horario="09:00">09:00</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary w-100 horario" data-horario="09:30">09:30</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary w-100 horario" data-horario="10:00">10:00</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary w-100 horario" data-horario="10:30">10:30</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary w-100 horario" data-horario="11:00">11:00</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary w-100 horario" data-horario="11:30">11:30</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary w-100 horario" data-horario="14:00">14:00</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary w-100 horario" data-horario="14:30">14:30</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary w-100 horario" data-horario="15:00">15:00</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary w-100 horario" data-horario="15:30">15:30</button></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalConfirmacao" tabindex="-1" aria-labelledby="modalConfirmacaoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalConfirmacaoLabel">Confirmação de Horário</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                     <strong id="textoConfirmacao"></strong>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
